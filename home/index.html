@@ -1,27 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <title>My first Vue page</title>
+
+  <style>
+    #app {
+      display: inline-block;
+      padding: 10px;
+      font-size: x-large;
+      background-color: lightgreen;
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
+
+  <h1>Vue Example</h1>
+
+  <p>
+    The message is taken from 'data' inside the Vue instance by writing
+    {{ message }} inside the div with id="app".
+  </p>
 
   <div id="app">
     {{ message }}
   </div>
 
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
   <script>
-    const app = Vue.createApp({
-      data() {
-        return {
-          message: "Hello World!"
-        }
+    new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello World!'
       }
-    })
-
-   app.mount('#app')
-
+    });
   </script>
+
 </body>
 </html>
