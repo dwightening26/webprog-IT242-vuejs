@@ -1,6 +1,11 @@
-.food-container img {
-  width: 90px;
-  height: auto;
+.food-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
 }
 
 .food-container img:hover {
