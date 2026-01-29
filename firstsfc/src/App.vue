@@ -5,7 +5,8 @@
   <food-item/>
 </template>
  
-<script></script>
+<script>
+</script>
  
 <style>
 #app > div {
