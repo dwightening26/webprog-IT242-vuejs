@@ -9,11 +9,11 @@
     export default {
         data() {
             return {
-                name: 'Mangoes'
+                name: 'Mangoes',
                 message: 'I like Mangoes'
             }
         }
-    }
+    };
 </script>
 
 <style></style>
