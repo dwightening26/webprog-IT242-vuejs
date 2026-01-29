@@ -1,13 +1,15 @@
 <template>
-  <h1>Food</h1>
-  <food-item/>
-  <food-item/>
-  <food-item/>
+  <div>
+    <h1>Fruits</h1>
+    <food-item />
+    <food-item />
+    <food-item />
+  </div>
 </template>
- 
-<script>
-</script>
- 
+
+<script></script>
+
+
 <style>
 #app > div {
   border: dashed black 1px;
