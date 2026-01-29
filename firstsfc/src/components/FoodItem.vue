@@ -13,7 +13,7 @@ export default {
       message: 'I like Mangoes'
     }
   }
-}
+};
 </script>
 
 <style></style>
