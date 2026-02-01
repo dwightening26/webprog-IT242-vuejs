@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="box">
     <h2>{{ name }}</h2>
     <p>{{ message }}</p>
   </div>
@@ -9,11 +9,18 @@
 export default {
   data() {
     return {
-      name: 'Mangoes',
-      message: 'I like Mangoes'
+      name: 'Banana',
+      message: 'I like Banana'
     }
   }
-};
+}
 </script>
 
-<style></style> 
+<style>
+.box {
+  border: 1px dashed black;
+  background-color: rgb(219, 236, 119);
+  padding: 15px;
+  width: 150px;
+}
+</style>

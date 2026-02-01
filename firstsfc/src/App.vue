@@ -1,21 +1,17 @@
 <template>
   <div>
     <h1>Fruits</h1>
-    <food-item />
-    <food-item />
-    <food-item />
+    <div class="container">
+      <food-item />
+      <food-item />
+      <food-item />
+    </div>
   </div>
 </template>
 
-<script></script>
-
-
 <style>
-#app > div {
-  border: dashed black 1px;
-  display: inline-block;
-  margin: 10px;
-  padding: 10px;
-  background-color: lightgreen;
+.container {
+  display: flex;
+  gap: 20px;
 }
 </style>
