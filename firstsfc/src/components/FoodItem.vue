@@ -20,7 +20,7 @@ export default {
 .box {
   border: 1px dashed black;
   background-color: rgb(219, 236, 119);
-  padding: 15px;
-  width: 150px;
+  padding: 20px;
+  flex: 1;
 }
 </style>
