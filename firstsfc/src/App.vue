@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Task 02 -->
     <h1>Fruits</h1>
     <div class="container">
       <food-item />
@@ -9,17 +8,16 @@
 
     <hr />
 
-    <!-- Task 03 -->
-    <Profile />
+    <PersonalProfile />
   </div>
 </template>
 
 <script>
-import Profile from './components/Profile.vue'
+import PersonalProfile from './components/PersonalProfile.vue'
 
 export default {
   components: {
-    Profile
+    PersonalProfile
   }
 }
 </script>

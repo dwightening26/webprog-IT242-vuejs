@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="profile">
     <h1>Personal Profile Web Page</h1>
 
     <p>
@@ -24,10 +24,10 @@
 
 <script>
 export default {
-  name: 'Profile'
+  name: 'PersonalProfile'
 }
 </script>
 
-<style scoped>
-@import '../assets/mystyle.css';
+<style>
+@import './css/PersonalProfile.css';
 </style>
