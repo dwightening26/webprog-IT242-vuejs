@@ -16,7 +16,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .box {
   border: 1px dashed black;
   background-color: rgb(214, 102, 82);
