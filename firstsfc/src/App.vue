@@ -3,8 +3,7 @@
     <h1>Fruits</h1>
     <div class="container">
       <food-item />
-      <food-item />
-      <food-item />
+      <food-item2 />
     </div>
   </div>
 </template>
@@ -16,3 +15,4 @@
   align-items: stretch;
 }
 </style>
+

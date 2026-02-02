@@ -9,8 +9,8 @@
 export default {
   data() {
     return {
-      name: 'Grapes and Strawberies',
-      message: 'I like Grapes and Strawberies'
+      name: 'Apples and Oranges',
+      message: 'I like apples and oranges'
     }
   }
 }
@@ -19,7 +19,7 @@ export default {
 <style>
 .box {
   border: 1px dashed black;
-  background-color: rgb(201, 98, 106);
+  background-color: rgb(214, 102, 82);
   padding: 20px;
   flex: 1;
 }
