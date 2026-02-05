@@ -3,8 +3,8 @@
     <h1>Fruits</h1>
 
     <div class="container">
-      <food-item />
-      <food-item2 />
+      <FoodItem />
+      <FoodItem2 />
     </div>
 
     <hr />
@@ -24,22 +24,18 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { supabase } from './lib/supabaseClient'
+
+import FoodItem from './components/FoodItem.vue'
+import FoodItem2 from './components/FoodItem2.vue'
 import PersonalProfile from './components/PersonalProfile.vue'
 
 const instruments = ref([])
 
-async function getInstruments() {
-  const { data, error } = await supabase
-    .from('instruments')
-    .select()
-
+onMounted(async () => {
+  const { data, error } = await supabase.from('instruments').select()
   if (!error) {
     instruments.value = data
   }
-}
-
-onMounted(() => {
-  getInstruments()
 })
 </script>
 
