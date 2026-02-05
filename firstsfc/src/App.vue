@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>Fruits</h1>
+
     <div class="container">
       <food-item />
       <food-item2 />
@@ -9,17 +10,37 @@
     <hr />
 
     <PersonalProfile />
+
+    <hr />
+
+    <ul>
+      <li v-for="instrument in instruments" :key="instrument.id">
+        {{ instrument.name }}
+      </li>
+    </ul>
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref, onMounted } from 'vue'
+import { supabase } from './lib/supabaseClient'
 import PersonalProfile from './components/PersonalProfile.vue'
 
-export default {
-  components: {
-    PersonalProfile
+const instruments = ref([])
+
+async function getInstruments() {
+  const { data, error } = await supabase
+    .from('instruments')
+    .select()
+
+  if (!error) {
+    instruments.value = data
   }
 }
+
+onMounted(() => {
+  getInstruments()
+})
 </script>
 
 <style>
@@ -33,25 +54,3 @@ hr {
   margin: 40px 0;
 }
 </style>
-
-<script setup>
-import { ref, onMounted } from 'vue'
-import { supabase } from './lib/supabaseClient'
-
-const instruments = ref([])
-
-async function getInstruments() {
-  const { data } = await supabase.from('instruments').select()
-  instruments.value = data
-}
-
-onMounted(() => {
-   getInstruments()
-})
-</script>
-
-<template>
-  <ul>
-    <li v-for="instrument in instruments" :key="instrument.id">{{ instrument.name }}</li>
-  </ul>
-</template>
